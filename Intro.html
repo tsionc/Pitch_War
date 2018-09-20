@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game Screen</title>
+</head>
+<title>Ten Questions</title>
+<script type="text/javascript">
+    var score = 0;
+    var questions = 10;
+		var audio = new Audio()
+		var sound_Effect= new Audio()
+		var sound= 'SoundEffect/boo.wav'
+
+		var playlist = new Array('Piano/noteA.wav', 'Piano/noteB.wav', 'Piano/noteC.wav', 'Piano/noteD.wav', 'Piano/noteE.wav', 'Piano/noteF.wav', 'Piano/noteG.wav');
+
+
+
+    function start() {
+			var random= Math.floor(Math.random() *7);
+			audio.loop = false;
+			audio.src = playlist[random];
+			audio.play();
+			// Level 1 will have 10 questions
+        if (questions == 10) {
+
+            document.getElementById("question").innerHTML = "What note is it?";
+            document.getElementById("option1").innerHTML = "Mercedes Benz";
+            document.getElementById("option2").innerHTML = "Toyota";
+            document.getElementById("option3").innerHTML = "Skoda";
+							document.getElementById("score").innerHTML = "Your score is: " + score;
+							//audio.stop();
+        }
+
+        else if (questions == 9) {
+            document.getElementById("question").innerHTML = "What note is it?";
+            document.getElementById("option1").innerHTML = "Fiji";
+            document.getElementById("option2").innerHTML = "United States of America";
+            document.getElementById("option3").innerHTML = "Russia";
+							document.getElementById("score").innerHTML = "Your score is: " + score;
+        }
+
+        else if (questions == 8) {
+            document.getElementById("question").innerHTML = "What note is it?";
+            document.getElementById("option1").innerHTML = "Amazon River";
+            document.getElementById("option2").innerHTML = "Nile River";
+            document.getElementById("option3").innerHTML = "Hudson River";
+							document.getElementById("score").innerHTML = "Your score is: " + score;
+					}
+
+		 else if (questions == 7) {
+				 document.getElementById("question").innerHTML = "What note is it?";
+				 document.getElementById("option1").innerHTML = "Hewlett Packard";
+				 document.getElementById("option2").innerHTML = "Howard Powell";
+				 document.getElementById("option3").innerHTML = "Honda Panda";
+				 	document.getElementById("score").innerHTML = "Your score is: " + score;
+		 }
+
+		 else if (questions == 6) {
+				 document.getElementById("question").innerHTML = "What note is it?";
+				 document.getElementById("option1").innerHTML = "Post Meridien";
+				 document.getElementById("option2").innerHTML = "Post Man";
+				 document.getElementById("option3").innerHTML = "PM";
+				 	document.getElementById("score").innerHTML = "Your score is: " + score;
+		 }
+
+		 else if (questions == 5) {
+				 document.getElementById("question").innerHTML = "What note is it";
+				 document.getElementById("option1").innerHTML = "Bill Gates";
+				 document.getElementById("option2").innerHTML = "Mark Zuckerburg";
+				 document.getElementById("option3").innerHTML = "Steve Wozniak";
+				 	document.getElementById("score").innerHTML = "Your score is: " + score;
+		 }
+
+		 else if (questions == 4) {
+				 document.getElementById("question").innerHTML = "What note is it";
+				 document.getElementById("option1").innerHTML = "A banana";
+				 document.getElementById("option2").innerHTML = "Small hair-like strands";
+				 document.getElementById("option3").innerHTML = "Steve Wozniak";
+				 	document.getElementById("score").innerHTML = "Your score is: " + score;
+		 }
+
+		 else if (questions == 3) {
+				 document.getElementById("question").innerHTML = "What note is it?";
+				 document.getElementById("option1").innerHTML = "Light crystal display";
+				 document.getElementById("option2").innerHTML = "Large crystal display";
+				 document.getElementById("option3").innerHTML = "Liquid crystal display";
+				 	document.getElementById("score").innerHTML = "Your score is: " + score;
+		 }
+
+		 else if (questions == 2) {
+				 document.getElementById("question").innerHTML = "What note is it?";
+				 document.getElementById("option1").innerHTML = "12";
+				 document.getElementById("option2").innerHTML = "6";
+				 document.getElementById("option3").innerHTML = "4";
+				document.getElementById("score").innerHTML = "Your score is: " + score;
+		 }
+
+		 else if (questions == 1) {
+				 document.getElementById("question").innerHTML = "What note is it?";
+				 document.getElementById("option1").innerHTML = "Satcha Nadella";
+				 document.getElementById("option2").innerHTML = "Bill Gates";
+				 document.getElementById("option3").innerHTML = "Mark Zuckerburg";
+				 	 document.getElementById("score").innerHTML = "Your score is: " + score;
+					 	//	audio.stop();
+		 }
+
+		 else if (questions == 0) {
+				 document.getElementById("question").innerHTML = "";
+				 document.getElementById("option1").innerHTML = "";
+				 document.getElementById("option2").innerHTML = "";
+				 document.getElementById("option3").innerHTML = "";
+				 document.getElementById("score").innerHTML = "Your total score is: " + score;
+		 }
+
+ }
+
+ function answer(question) {
+		 if (questions == 10) {
+				 if (question == 1) {
+						 score++;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 2) {
+
+						 score = score;
+						 questions--;
+						sound_Effect.arc= 'SoundEffect/boo.wav';
+						sound_Effect.play();
+						 start();
+				 }
+
+				 else if (question == 3) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+		 }
+
+		 else if (questions == 9) {
+				 if (question == 1) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 2) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 3) {
+						 score++;
+						 questions--;
+						 start();
+				 }
+		 }
+
+		 else if (questions == 8) {
+				 if (question == 1) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 2) {
+						 score++;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 3) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+		 }
+
+		 else if (questions == 7) {
+				 if (question == 1) {
+						 score++;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 2) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 3) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+		 }
+
+		 else if (questions == 6) {
+				 if (question == 1) {
+						 score++;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 2) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 3) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+		 }
+
+		 else if (questions == 5) {
+				 if (question == 1) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 2) {
+						 score++;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 3) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+		 }
+
+		 else if (questions == 4) {
+				 if (question == 1) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 2) {
+						 score++;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 3) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+		 }
+
+		 else if (questions == 3) {
+				 if (question == 1) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 2) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 3) {
+						 score++;
+						 questions--;
+						 start();
+				 }
+		 }
+
+		 else if (questions == 2) {
+				 if (question == 1) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 2) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 3) {
+						 score++;
+						 questions--;
+						 start();
+				 }
+		 }
+
+		 else if (questions == 1) {
+				 if (question == 1) {
+						 score++;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 2) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+
+				 else if (question == 3) {
+						 score = score;
+						 questions--;
+						 start();
+				 }
+		 }
+ }
+</script>
+</head>
+<body onload="javascript:start()">
+<div>
+<span id="question">
+The question will be changed dynamically so the text here doesn't matter
+ </span><br />
+ <button onclick="javascript:answer(1)" id="option1">Random Answer 1</button><br />
+ <button onclick="javascript:answer(2)" id="option2">Random Answer 2</button><br />
+ <button onclick="javascript:answer(3)" id="option3">Random Answer 3</button><br />
+<font face="Tahoma" color="red"><span id="score"></span></font>
+
+
+
+</body>
+</html>

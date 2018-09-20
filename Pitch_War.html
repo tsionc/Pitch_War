@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>Pitch-War</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.9/howler.min.js"></script>
+   <script src="IntroScript.js"></script>
+</head>
 <style>
 .Info {
     background-color: black;
@@ -10,28 +15,34 @@
 		height:50px;
     width:500px;
 }
+
+table {
+    border: 1px solid black;
+}
+.character:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    background-color: gray;
+}
+img {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 </style>
-<head>
-	<title>Pictch-War</title>
-</head>
-<body style="background-color:BurlyWood ;">
-<p>	<a href="Game Screen.html"><img src="Logo.jpg" alt="Game Screen.html" style="float:left;width:630px;height:585px;border:0"></img>
-	</a> </p>
 
 
-<a href="How to play.html"><button class= "button">How to Play </button></a>
-<h3 class="Info ">Player 1</h3>
-<p><form>
-  First name:<br>
-  <input type="text" name="firstname"><br>
+<body onload="javascript:hello()" style="background-color:BurlyWood ;">
+<img src="Logo.jpg" alt="Game Screen.html" style="width:80%" >
+<span id="kp"></span>
+<br />
+<span id="kc"></span>
+<p id="status"></p>
 
-</form> </p>
-<h3 class="Info">Player 2</h3>
-<p><form>
-  First name:<br>
-  <input type="text" name="firstname"><br>
 
-</form> </p>
+
 
 
 
